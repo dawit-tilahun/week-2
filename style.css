@@ -1,0 +1,213 @@
+/* Core Styles */
+*{
+  box-sizing:border-box;
+}
+
+.grid-item {
+  width:90%;
+  margin:0 auto;
+  display:grid;
+  grid-gap:1rem;
+  grid-template-rows: 3rem;
+  grid-template-columns:1fr, 1fr, 1fr, 1fr;
+  
+}
+#grid-flex{
+  display:flex;
+  justify-content:flex-start;
+  flex-flow:row wrap,
+  clear:both;
+  
+}
+
+#grid-floats .grid-item, 
+#grid-flex .grid-item {
+  margin:;
+}
+
+section{
+  column-count:;
+  column-gap:;
+  column-rule-style:;
+}
+.body{
+  font-family:Times New Roman,Book Antiqua,Calibri;
+  body-sizing:border-box; 
+  margin:1rem;
+  background:#ccc;
+  color:#33f;
+  font-size:1.1rem;
+  line-height:1;
+  text-align:justify;
+  padding:0;
+}
+
+img{
+  display:block;
+  width:100%;
+  height:auto;
+  paddin:0 0;
+  box-shadow:0 10px 20px rgba (0,0,0,0.15), 0 5px 5px rgba(0,0,0,0.20);
+}
+
+h1,h2{
+  margin:0;
+  text-align:center;
+  color:#FF0000;
+  background-color:#80800;
+ 
+} 
+h3{
+  font-family:bookman old style;
+  margin:0;
+  padding:1em 0;
+  color:#11f;
+}
+ul{
+  padding:0;
+  marging,0;
+  list-style-type:none;
+  }
+
+main{
+  font-family:Book Antiqua,Calibri;
+  font-size:1.1rem;
+  text-alignment:justify;
+  margin:0 auto;
+  
+}
+@keyframes slidein{
+  from{
+    margin-left:100%;
+    width:300%;
+  }
+  to{
+    margin-left:0%;
+    width:100%;
+  }
+}
+p{
+  margin:0;
+  padding:0 0;
+  font-size:1.3rem;
+}
+
+/*mobile*/
+@media (min-width:600px) {
+  
+  li:first-child img{
+    transition:transform: 3s;
+  }
+  li:first-child img:hover{
+    transorm:scale(0.5);
+  }
+  
+  #grid-floats{
+    grid-template-columns:repeat(2, 1fr);
+  }
+  #grid-floats li:first-child{
+    width:90%;
+  }
+  #grid-float li:nth-child(n-2){
+    float:left;
+    margin-left:20px;
+    width:50%;
+    height:200px;
+    
+  }
+  
+  #grid-flex li:first-child{
+    width:90%;    
+  }
+  #grid-flex li:nth-child(n+2){
+    width:45%;
+  }
+  #grid-flex li:last-child{
+    align-self:flex-start
+  }
+}
+/* tablet */
+@media (min-width: 700px) and (max-width:900pc){
+  /*effect on image 1st row*/
+  
+  li:nth-child(-n+2) img{
+    transition:transform 3s;
+  }
+  li:nth-child(-n+2) img:hover{
+    transform:scale(0.5)
+  }
+  
+   #grid-floats{
+    grid-template-columns:repeat(4, 1fr);
+     
+  #grid-float li:nth-child(-n+2){
+    width:45%;
+    float:left;
+  }
+  grid-float:li:nth-child (n+2){
+    width:20%;
+    height:200px;
+    float:left;
+  }
+  /*grid with flex*/
+  #grid-flex li:nth-child(-n+2){
+    width:45%;
+  }
+  #grid-flex .grid-item{
+    width:30%;
+    margin:3%;
+  }
+}
+
+/*PC*/
+@media (min-width:901px) and (max-width:1800px){
+  
+  li:nth-child(-n+3) img{
+    transition:transform 3s;
+  }
+  li:nth-child(-n+3) im:hover{
+    transform: scale(0.5);
+  }
+  
+   #grid-floats{
+    grid-template-columns:repeat(6, 1fr);
+     
+  #grid-f;oats li:nth-child(-1n+3){
+    width:20%;
+    height:400px;
+    float:left;
+  }
+  #grid-floats li:first-child{
+    width:45%;
+    height:400px;
+    margin-left:20px;
+    margin-bottom:
+  }
+  #grid-float li:nth-child(n+4){
+    width: 20%;
+    height: 300px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    float:right;
+    
+    #grid-floats li:nth-child(12) {
+      margin-left:90px;
+    }
+      /*grid with flex*/
+    #grid-flex li:first-child{
+      width:30%;
+      margin-left:40px;
+      flex-grow:1;
+    }
+    #grid-flex li:nth-child(2):nth-child(3){
+      flex-grow:2;
+    }
+    
+  }
+  #grid-flex .grid-item{
+    width:20%
+  }
+}
+
+
+
